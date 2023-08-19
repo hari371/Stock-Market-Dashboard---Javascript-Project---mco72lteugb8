@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stock Market Dashboard</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="App.js"></script>
+        </head>
+    <body onload="intraday()" class="show">
+        <div class="page">
+            <h1 class="title"> 
+                <span style="color: green;">&#8593;</span> 
+                STOCK MARKET DASHBOARD 
+                <span style="color:red;">&#8595;</span>
+            </h1>
 
+            <div class="container">
+                <input id="search" class="search_bar" type="text" placeholder="Search for Symbol..">
+                <button class="search_button" onclick="load_data()"><i class="fa fa-search"></i></button>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <button class="option" id="INTRADAY" onclick="intraday()">INTRADAY</button>                  
+                    <button class="option" id="DAILY" onclick="daily()">DAILY</button>                  
+                    <button class="option" id="WEEKLY" onclick="weekly()">WEEKLY</button>                  
+                    <button class="option" id="MONTHLY" onclick="monthly()">MONTHLY</button>                  
+                </div>   
+            </div> 
+
+            <div class="container" id="watchlist_con" hidden="true">
+                <h1 class="watchlist_title">YOUR WATCHLIST</h1>
+                <div id="watchlist">
+                    
+                </div>
+            </div>  
+
+            <div id="info_con" class="container" hidden="true">
+
+                <h1 class="stocks" id="stocks">
+                </h1>
+                
+                <table class="info" id="info">
+                </table>
+            </div>
+            
+        </div> 
+    </body>
+</html>
